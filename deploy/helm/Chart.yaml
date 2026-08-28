@@ -1,0 +1,4 @@
+apiVersion: v2
+name: ogl-mini
+version: 1.0.0
+description: Hybrid Guard for AI agents (OGL-Mini Model based)
