@@ -9,6 +9,10 @@ __pycache__/
 # Idea
 .idea
 
+# Ignore datasets
+/data/
+/training/
+
 # Distribution / packaging
 .Python
 build/
