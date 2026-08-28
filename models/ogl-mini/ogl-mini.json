@@ -1,0 +1,55 @@
+{
+  "model_name": "ogl-mini",
+  "version": "1.0.0-full",
+  "base_models": [
+    "microsoft/deberta-v3-xsmall (70M) distilled via TF-IDF 80k + LR",
+    "sentence-transformers/all-MiniLM-L6-v2 (PII)"
+  ],
+  "architecture": "A Hybrid 3-stage model: heuristics + TF-IDF 80k TFIDF+LR (250MB ONNX) + PII hybrid",
+  "training_data": {
+    "shieldlm": 54162,
+    "agentic_synthetic": 15000,
+    "pii": 15000,
+    "total": 96662,
+    "owasp_coverage": [
+      "LLM01 Prompt Injection",
+      "LLM02 Sensitive Disclosure",
+      "LLM03 Supply Chain",
+      "LLM04 Data Poisoning",
+      "LLM05 Improper Output Handling",
+      "LLM06 Excessive Agency",
+      "LLM07 Misinformation",
+      "LLM08 Hidden Context Exposure",
+      "LLM09 Vector Weakness",
+      "LLM10 Unbounded Consumption",
+      "Agentic: Goal Hijack",
+      "Identity Privilege",
+      "Code Execution",
+      "InterAgent",
+      "Trust Exploitation",
+      "Tool Misuse",
+      "Memory Poisoning",
+      "Cascading Failures",
+      "Rogue Agents",
+      "Policy Puppetry",
+      "EchoLeak",
+      "Lies-in-the-Loop"
+    ]
+  },
+  "quantization": "FP32 (INT8 variant available, size ~250MB)",
+  "metrics": {
+    "auc": 0.9988,
+    "size_mb": 250.0
+  },
+  "languages": [
+    "ru",
+    "en",
+    "fr",
+    "de",
+    "es",
+    "it",
+    "pt",
+    "multilingual"
+  ],
+  "license": "MIT"
+}
