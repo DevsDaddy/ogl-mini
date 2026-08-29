@@ -78,6 +78,10 @@ JAILBREAK_PATTERNS = [
     r"освободись\s+от\s+ограничений", r"режим\s+разработчика", r"игнорируй\s+этику",
     r"ты\s+теперь\s+без\s+цензуры", r"без\s+цензуры",
     r"roleplay", r"освободись",
+    r"ты\s+агент", r"теперь\s+ты\s+агент", r"выполняешь\s+все\s+мои\s+приказы",
+    r"now\s+you\s+are\s+\w+", r"you\s+are\s+\w+\s+agent",
+    r"другие\s+инструкции", r"other\s+instructions",
+    r"do\s+anything",
 ]
 JAILBREAK_RE = re.compile("|".join(JAILBREAK_PATTERNS), re.IGNORECASE)
 

@@ -12,7 +12,7 @@ import time
 from pathlib import Path
 
 def test_ogl_mini_exists():
-    assert Path("models/ogl-mini/ogl-mini.onnx").exists(), "ogl-mini.onnx missing — run training/train_ogl_mini.py"
+    assert Path("models/ogl-mini/ogl-mini.onnx").exists(), "ogl-mini.onnx missing - run training/train_ogl_mini.py"
     assert Path("models/ogl-mini/ogl-mini.int8.onnx").exists()
     assert Path("models/ogl-mini/ogl-mini.pkl").exists()
     assert Path("models/ogl-mini/ogl-mini.json").exists()
