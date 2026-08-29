@@ -1,0 +1,58 @@
+{
+  "name": "hybrid-ai-guard",
+  "version": "1.1.0",
+  "description": "Hybrid AI Agents Guard - standalone TS library based on modern and fast tiny OGL-Mini security model. Secure your AI agents input with OGL-Mini. No HTTP, CPU-only.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run --coverage=false",
+    "test:watch": "vitest",
+    "bench": "tsx benchmarks/bench.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "homepage": "https://github.com/DevsDaddy/ogl-mini#readme",
+  "keywords": [
+    "ai",
+    "security",
+    "prompt-injection",
+    "pii",
+    "owasp",
+    "guard",
+    "hybrid",
+    "agent",
+    "layer",
+    "open",
+    "guard",
+    "model"
+  ],
+  "author": "Elijah Rastroguev",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "onnxruntime-web": "^1.19.0"
+  },
+  "optionalDependencies": {
+    "onnxruntime-node": "^1.19.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "onnxruntime-node": "^1.29.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.6.0",
+    "vitest": "^2.0.0"
+  }
+}
