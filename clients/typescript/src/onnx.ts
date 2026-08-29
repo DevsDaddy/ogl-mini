@@ -52,7 +52,7 @@ async function getOrt(): Promise<any> {
     } else {
         // Node
         try {
-            // Trying to get native (если он устраивает)
+            // Trying to get native
             return await import("onnxruntime-node");
         } catch {
             // Trying to get web version WASM
