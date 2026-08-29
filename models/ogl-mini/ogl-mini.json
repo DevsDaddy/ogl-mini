@@ -1,16 +1,16 @@
 {
   "model_name": "ogl-mini",
-  "version": "1.0.0-full",
+  "version": "1.1.0-full",
   "base_models": [
     "microsoft/deberta-v3-xsmall (70M) distilled via TF-IDF 80k + LR",
     "sentence-transformers/all-MiniLM-L6-v2 (PII)"
   ],
-  "architecture": "A Hybrid 3-stage model: heuristics + TF-IDF 80k TFIDF+LR (250MB ONNX) + PII hybrid",
+  "architecture": "Hybrid 3-stage: heuristics + TF-IDF 80k TFIDF+LR (250MB ONNX) + PII hybrid",
   "training_data": {
     "shieldlm": 54162,
     "agentic_synthetic": 15000,
     "pii": 15000,
-    "total": 96662,
+    "total": 110734,
     "owasp_coverage": [
       "LLM01 Prompt Injection",
       "LLM02 Sensitive Disclosure",
@@ -38,7 +38,7 @@
   },
   "quantization": "FP32 (INT8 variant available, size ~250MB)",
   "metrics": {
-    "auc": 0.9988,
+    "auc": 0.997,
     "size_mb": 250.0
   },
   "languages": [

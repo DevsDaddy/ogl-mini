@@ -1,0 +1,29 @@
+{
+  "model_name": "ogl-mini-pii",
+  "version": "1.1.0-small",
+  "labels": [
+    "EMAIL",
+    "PHONE",
+    "PERSON",
+    "IP",
+    "IBAN",
+    "BANK_CARD",
+    "PASSPORT",
+    "GOV_ID",
+    "DOB",
+    "ADDRESS",
+    "SOCIAL"
+  ],
+  "f1_micro": 0.8598,
+  "languages": [
+    "ru",
+    "en",
+    "fr",
+    "de",
+    "es",
+    "it",
+    "pt"
+  ],
+  "training": "53000 texts, custom pii datas 15k + synthetic",
+  "quantization": "FP32 + INT8"
+}
