@@ -1,0 +1,15 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: { name: ogl-mini }
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector: { matchLabels: { app: ogl-mini } }
+  template:
+    metadata: { labels: { app: ogl-mini } }
+    spec:
+      containers:
+        - name: api
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          ports: [{ containerPort: 8000 }]
+          readinessProbe: { httpGet: { path: /health, port: 8000 }, initialDelaySeconds: 5 }
+          resources: {{ toYaml .Values.resources | nindent 12 }}

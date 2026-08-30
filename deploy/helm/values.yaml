@@ -1,0 +1,16 @@
+replicaCount: 2
+image:
+  repository: ogl-mini
+  tag: "1.1.0"
+  pullPolicy: IfNotPresent
+service:
+  type: ClusterIP
+  port: 8000
+resources:
+  limits: { cpu: "1000m", memory: "500Mi" }
+  requests: { cpu: "200m", memory: "256Mi" }
+autoscaling:
+  enabled: true
+  minReplicas: 2
+  maxReplicas: 8
+  targetCPU: 70
