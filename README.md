@@ -1,4 +1,4 @@
-# OGL-Mini 🔒 Hybrid and Lightweight seucirty model for AI Agents
+# Open Guard Layer (OGL-Mini) 🔒 Hybrid and Lightweight seucirty model for AI Agents
 
 ![OGL-Mini - a hybrid lightweight security model for AI Agents (OWASP 2025-2026)](images/cover.png)
 
@@ -171,6 +171,33 @@ pii.SetOnnxScorer(scorer) // PiiOnnxScorer func(text string) (map[string]float64
 - `models/ogl-mini/ogl-mini.onnx` 250MB (guard, TF-IDF 80k + LR, dummy 247MB) + `ogl-mini.pkl` 3.8MB
 - `models/ogl-mini/ogl-mini-pii.onnx` 2.01MB (PII, TF-IDF 20k + OneVsRest 11 labels, distilled MiniLM-L6, F1 0.79 → hybrid 0.95) + `ogl-mini-pii.int8.onnx` 2.01MB + `ogl-mini-pii.pkl` 2MB + `pii.onnx` 333KB (binary has_pii)
 - `models/ogl-mini/ogl-mini.int8.onnx` 2.8MB - for browser/edge
+
+---
+
+## Comparison
+**The OGL-Mini isn't just another detector.** It's a modern, lightweight, and flexible security tool.
+
+**Below is a comparison with other models and solutions:**
+
+| Criteria                   | OGL-Mini                                           | Bastion                              | Llama Prompt Guard 2    | Lunaris Guard               |
+|----------------------------|----------------------------------------------------|--------------------------------------|-------------------------|-----------------------------|
+| **Security Model**         | **Hybrid** (heuristics → MiniClassifier → PII NER) | **Hybrid** (heuristics → DeBERTa-v3) | BERT-style classifier   | Dual-head (ModernBERT-base) |
+| **Size**                   | ~300 MB / ~3MB (INT8), Tiny                        | 70M, Small                           | 86M, Small              | 149M, Small                 |
+| **Languages**              | Primary RU / EN                                    | EN                                   | Multi-Language          | EN                          |
+| **PII-Detection**          | ✅ (NER)                                            | ❌                                    | ❌                       | ❌                           |
+| **Speed (CPU)**            | < 10ms (0.15ms - 2ms)                              | ~5ms                                 | N/A                     | N/A                         |
+| **WASM / Browser support** | ✅                                                  | ❌                                    | ❌                       | ❌                           |
+| **Languages / SDK**        | Python / Typescript / Go                           | Python                               | Python                  | Python                      |
+| **Agent specific**         | Agent security tool                                | Input filter                         | Input filter            | Agent security tool         |
+| **Architecture**           | Microservice / polyglot library                    | Fast API microservice                | Microservice (wrapper)  | Library                     |
+
+
+### Our model is
+- **Polyglot architecture for microservices**. We support Python / TypeScript / Go implementations.
+- **Built-in lightweight data leak prevention (PII NER):** For AI agents that process personal data, this is a critical security feature.
+- **Unique lightweight design and WASM:** This allows security to be pushed to the perimeter. For example, to the user's browser or IoT device - a feature unavailable with other solutions.
+
+---
 
 ## License
 **OGL-Mini** library is distributed under the MIT license. You can use it however you like. I would appreciate any feedback and suggestions for improvement.
