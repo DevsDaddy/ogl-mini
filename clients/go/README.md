@@ -123,3 +123,5 @@ Read more about **OGL-Mini** model at [Repository homepage](https://github.com/d
 Full license text [can be found here](https://github.com/devsdaddy/ogl-mini/blob/main/LICENSE)
 
 ---
+
+[About](#about-ogl-mini) | [Quick Start](#quick-start) | [More information](https://github.com/devsdaddy/ogl-mini/) | [Contact Me](mailto:devsdaddy@atomicmail.io)
