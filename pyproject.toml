@@ -1,6 +1,6 @@
 [project]
 name = "ogl-mini"
-version = "1.0.0"
+version = "1.1.0"
 description = "Full featured hybrid security model for AI Agents security: Input / Output Guard + PII Detection"
 readme = "README.md"
 requires-python = ">=3.10"

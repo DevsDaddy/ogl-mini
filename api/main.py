@@ -23,7 +23,7 @@ limiter = Limiter(key_func=get_remote_address, default_limits=["100/minute", "10
 app = FastAPI(
     title="OGL-Mini Hybrid Guard",
     description="Full-featured hybrid model for AI Agents security: Input / Output Guard + PII Detection",
-    version="1.0.0",
+    version="1.1.0",
     docs_url="/docs",
     redoc_url="/redoc",
     openapi_url="/openapi.json",
