@@ -1,4 +1,4 @@
-# OGL-Mini 🔒 Hybrid AI Agent Security for Typescript
+# Open Guard Layer (OGL-Mini) 🔒 Hybrid AI Agent Security for Typescript
 
 ![OGL-Mini - a hybrid lightweight security model for AI Agents (OWASP 2025-2026)](images/cover.png)
 
